@@ -12,3 +12,7 @@
   ![image](https://user-images.githubusercontent.com/43032377/102309385-ffe3aa80-3fab-11eb-8c00-7061708caee3.png)
 
 </details>
+
+### 기술스택
+* Swift 5.3.1
+* 42 API
