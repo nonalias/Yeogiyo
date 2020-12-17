@@ -97,26 +97,26 @@ func initializeCluster(c : inout [User], clusterNumber: Int)
     
     if (clusterNumber % 2 == 1)
     {
-        i = 1
-        while i < 10 {
-            j = 1
-            while j < 8 {
+        i = 9
+        while i > 0 {
+            j = 7
+            while j > 0 {
                 c.append(User(c: clusterNumber, r: i, s: j))
-                j += 1
+                j -= 1
             }
-            i += 1
+            i -= 1
         }
     }
     else
     {
-        i = 1
-        while i < 11 {
-            j = 1
-            while j < 9 {
+        i = 10
+        while i > 0 {
+            j = 8
+            while j > 0 {
                 c.append(User(c: clusterNumber, r: i, s: j))
-                j += 1
+                j -= 1
             }
-            i += 1
+            i -= 1
         }
     }
 }
