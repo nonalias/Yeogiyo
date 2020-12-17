@@ -125,7 +125,8 @@ func getStatusByUsersProject(id: Int, code: Int, token: String) -> Int
 {
     var status : Int
     status = 0
-    var urlStr : String = "https://api.intra.42.fr/v2/users/taehkim/projects_users?filter[project_id]=" + String(code)
+    var urlStr : String = "https://api.intra.42.fr/v2/users/" + String(id) + "/projects_users?filter[project_id]=" + String(code)
+    
     var url = URL(string: urlStr)!
     var request: URLRequest = URLRequest(url: url)
     request.httpMethod = "GET"
@@ -140,11 +141,15 @@ func getStatusByUsersProject(id: Int, code: Int, token: String) -> Int
         json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
     }).resume()
     sem.wait()
-    if json == nil
+    if json?.count == 0
     {
         return 1
     }
     let compareStr : String? = json?[0]["status"] as? String
+    if (compareStr == nil)
+    {
+        return 1
+    }
     //print(compareStr!)
     let FINISH: String = "finished"
     let PROGRESS: String = "in_progress"
@@ -166,8 +171,9 @@ func projectProc(c: [User], pCode: Int, token: String?) -> Void
     {
         if (c[i].id != nil)
         {
-            //print("hello")
+            print("hello")
             var status : Int = getStatusByUsersProject(id: c[i].id!, code: pCode, token: token!)
+            print("pCode : \(pCode)")
             c[i].status = status
         }
         i += 1

@@ -21,6 +21,20 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         pageTitle.title = project
         let projectKey = projectDic[project]!
+        projectProc(c: c1, pCode: projectKey, token: myToken)
+        projectProc(c: c2, pCode: projectKey, token: myToken)
+        var i : Int = 1
+        while i < c1.count
+        {
+            if (c1[i].id != nil)
+            {
+                print(c1[i].login)
+                print(c1[i].id)
+                print(c1[i].status)
+            }
+            i += 1
+        }
+        
         //print(projectKey)
         
         // Do any additional setup after loading the view.
@@ -64,7 +78,8 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        //return self.items.count
+       return c1.count
     }
     
     // make a cell for each cell index path
@@ -74,21 +89,21 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell: MyCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MyCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cel
-        
-        if (items[indexPath.item] == "1") {
+        if (c1[indexPath.item].status == 1) {
             cell.backgroundColor = UIColor.systemGray //make cell more viseible in our example project
-        } else if (items[indexPath.item] == "5"){
+        } else if (c1[indexPath.item].status == 2){
             cell.backgroundColor = UIColor.systemGreen
-        } else if (items[indexPath.item] == "6"){
+        } else if (c1[indexPath.item].status == 3){
             cell.backgroundColor = UIColor.systemBlue
         } else {
             cell.backgroundColor = UIColor.systemGray3
         }
-        
+        //print(indexPath.item)
         //cell.myLabel.text = items[indexPath.row]
         //cell.myLabel.textColor = UIColor.white
         //cell.myLabel.backgroundColor = UIColor.systemIndigo
-        
+        //print(indexPath)
+        //print(type(of: indexPath))
         //cell 모서리 라운드처리
         cell.layer.cornerRadius = 10
         
@@ -104,9 +119,9 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("You selected cell #\(indexPath.item)!")
         //click 했을 때 특정행동 수행.
         
-        if (items[indexPath.item] == "6") {
+        if (c1[indexPath.item].url != nil) {
 //            print("find 6")
-            if let url = URL(string: "http://tom7930.tistory.com") {
+            if let url = URL(string: c1[indexPath.item].url!) {
                 UIApplication.shared.open(url, options: [:])
             }
 
@@ -117,8 +132,8 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
     let reuseIdentifier = "cell" //
     
     
-    
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15", "16", "17", "18", "19", "20", "6", "7", "8","9","10","11","12","13","14","15", "1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3"]
+    //var index[]
+    var items = ["1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15", "16", "17", "18", "19", "20", "6", "7", "8","9"]//,"10","11","12","13","14","15", "1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3"]
     
 //    @IBOutlet var collectionView: UICollectionView!
     
