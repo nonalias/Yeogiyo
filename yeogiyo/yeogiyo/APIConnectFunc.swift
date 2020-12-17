@@ -23,7 +23,7 @@ func get_token(uid: String, secret: String) -> Any
         guard let data = data else { print("nothing");return }
 
         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
-        print(json)
+        //print(json)
         token = json?["access_token"]
     }).resume()
     sem.wait()
@@ -121,4 +121,55 @@ func initializeCluster(c : inout [User], clusterNumber: Int)
     }
 }
 
-
+func getStatusByUsersProject(id: Int, code: Int, token: String) -> Int
+{
+    var status : Int
+    status = 0
+    var urlStr : String = "https://api.intra.42.fr/v2/users/taehkim/projects_users?filter[project_id]=" + String(code)
+    var url = URL(string: urlStr)!
+    var request: URLRequest = URLRequest(url: url)
+    request.httpMethod = "GET"
+    let sem = DispatchSemaphore.init(value: 0)
+    let appMessage = " Bearer " + token
+    request.setValue(appMessage, forHTTPHeaderField: "Authorization")
+    request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+    var json: [[String: Any]]?
+    session.dataTask(with: request, completionHandler: { (data, response, error) in
+        defer { sem.signal() }
+        guard let data = data else { print("nothing");return }
+        json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+    }).resume()
+    sem.wait()
+    if json == nil
+    {
+        return 1
+    }
+    let compareStr : String? = json?[0]["status"] as? String
+    //print(compareStr!)
+    let FINISH: String = "finished"
+    let PROGRESS: String = "in_progress"
+    if compareStr! == PROGRESS
+    {
+        status = 2
+    }
+    else if compareStr! == FINISH
+    {
+        status = 3
+    }
+    return status
+}
+func projectProc(c: [User], pCode: Int, token: String?) -> Void
+{
+    var i : Int = 1
+    
+    while i < c.count
+    {
+        if (c[i].id != nil)
+        {
+            //print("hello")
+            var status : Int = getStatusByUsersProject(id: c[i].id!, code: pCode, token: token!)
+            c[i].status = status
+        }
+        i += 1
+    }
+}
