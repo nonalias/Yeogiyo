@@ -10,7 +10,6 @@ import UIKit
 
 class SeatViewController: UIViewController {
 
-    @IBOutlet var projectName:UILabel!
     @IBOutlet var pageTitle:UINavigationItem!
     var project:String = ""
     var tocken: String = ""
