@@ -18,6 +18,7 @@
 		4F74A0802589DA3500CD19F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F74A07E2589DA3500CD19F3 /* LaunchScreen.storyboard */; };
 		4F74A08B2589DA3500CD19F3 /* yeogiyoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74A08A2589DA3500CD19F3 /* yeogiyoTests.swift */; };
 		4F74A0962589DA3500CD19F3 /* yeogiyoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74A0952589DA3500CD19F3 /* yeogiyoUITests.swift */; };
+		AC13434C258B815300191DEC /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC13434B258B815300191DEC /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4F74A0912589DA3500CD19F3 /* yeogiyoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yeogiyoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F74A0952589DA3500CD19F3 /* yeogiyoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yeogiyoUITests.swift; sourceTree = "<group>"; };
 		4F74A0972589DA3500CD19F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC13434B258B815300191DEC /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				33188807258B650E0037D7C4 /* APIConnectFunc.swift */,
 				334AA825258B691F00F8E16A /* UserClass.swift */,
 				4F6FA0B9258B174800EBA063 /* SeatViewController.swift */,
+				AC13434B258B815300191DEC /* MyCollectionViewCell.swift */,
 			);
 			path = yeogiyo;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				334AA826258B691F00F8E16A /* UserClass.swift in Sources */,
+				AC13434C258B815300191DEC /* MyCollectionViewCell.swift in Sources */,
 				4F74A0782589DA3300CD19F3 /* ViewController.swift in Sources */,
 				4F74A0742589DA3300CD19F3 /* AppDelegate.swift in Sources */,
 				4F74A0762589DA3300CD19F3 /* SceneDelegate.swift in Sources */,
