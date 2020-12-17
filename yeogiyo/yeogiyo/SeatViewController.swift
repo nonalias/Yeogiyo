@@ -99,9 +99,6 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.backgroundColor = UIColor.systemGray6
         }
         //print(indexPath.item)
-        cell.myLabel.text = "1"
-        cell.myLabel.textColor = UIColor.systemFill
-        cell.myLabel.adjustsFontSizeToFitWidth = true
         //cell.myLabel.backgroundColor = UIColor.systemIndigo
         //print(indexPath)
         //print(type(of: indexPath))
