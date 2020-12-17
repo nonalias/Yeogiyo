@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SeatViewController: UIViewController {
+class SeatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var pageTitle:UINavigationItem!
     var project:String = ""
@@ -54,5 +54,89 @@ class SeatViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // 셀 세로 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    
+    // 셀 가로 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    // 셀 크기 정하기 (n분의 1)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       // let width = collectionView.frame.width / 9 - 1 // 3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
+       // let size = CGSize(width: width, height: width)
+        
+        let height = collectionView.frame.height / 8 - 1 // n등분
+        let size = CGSize(width: height, height: height)
+        
+        return size
+    }
+    
+    // MARK : - UICollectionViewDetaSource protocol
+    
+    // tell the collection view how many cells to make
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    // make a cell for each cell index path
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+        // get a reference to our storyboard cell
+        let cell: MyCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MyCollectionViewCell
+        
+        // Use the outlet in our custom class to get a reference to the UILabel in the cel
+        
+        if (items[indexPath.item] == "1") {
+            cell.backgroundColor = UIColor.systemGray //make cell more viseible in our example project
+        } else if (items[indexPath.item] == "5"){
+            cell.backgroundColor = UIColor.systemGreen
+        } else if (items[indexPath.item] == "6"){
+            cell.backgroundColor = UIColor.systemBlue
+        } else {
+            cell.backgroundColor = UIColor.systemGray3
+        }
+        
+        //cell.myLabel.text = items[indexPath.row]
+        //cell.myLabel.textColor = UIColor.white
+        //cell.myLabel.backgroundColor = UIColor.systemIndigo
+        
+        //cell 모서리 라운드처리
+        cell.layer.cornerRadius = 10
+        
+        return cell
+    }
+    
+   
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("You selected cell #\(indexPath.item)!")
+        //click 했을 때 특정행동 수행.
+        
+        if (items[indexPath.item] == "6") {
+//            print("find 6")
+            if let url = URL(string: "http://tom7930.tistory.com") {
+                UIApplication.shared.open(url, options: [:])
+            }
+
+        }
+        collectionView.reloadData()
+    }
+
+    let reuseIdentifier = "cell" //
+    
+    
+    
+    var items = ["1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15", "16", "17", "18", "19", "20", "6", "7", "8","9","10","11","12","13","14","15", "1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3", "4", "5", "6", "7", "8","9","10","11","12","13","14","15","1", "2", "3"]
+    
+//    @IBOutlet var collectionView: UICollectionView!
+    
 
 }
