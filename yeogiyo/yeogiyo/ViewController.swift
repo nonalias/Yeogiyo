@@ -17,7 +17,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     
-    let data = ["libft", "GNL", "printf", "netwhat", "ft_server"]
+    let data = ["Libft", "get_next_line", "ft_printf", "netwhat", "ft_server", "cub3d", "miniRT", "minishell", "libasm", "ft_services", "CPP Module 00", "CPP Module 01", "CPP Module 02", "CPP Module 03", "CPP Module 04", "CPP Module 05", "CPP Module 06", "CPP Module 07", "CPP Module 08", "Philosophers", "ft_containers", "webserv", "ft_irc", "ft_transcendence"]
     var filteredData: [String]!
     
     override func viewDidLoad() {
