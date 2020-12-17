@@ -67,7 +67,7 @@ func clusterProc(c: [User], jsonCluster: [[String: Any]]?)
                 var usrDic: NSDictionary? = (jsonCluster?[j]["user"])! as? NSDictionary
                 var usrId : Int? = usrDic?["id"] as? Int
                 var usrLogin : String? = usrDic?["login"] as? String
-                var usrUrl : String? = usrDic?["url"] as? String
+                var usrUrl : String? = "https://profile.intra.42.fr/users/" + usrLogin!
                 c[i].setValidUser(id: usrId!, host: host!, url: usrUrl!, login: usrLogin!)
                 c[i].showAll()
             }
