@@ -55,12 +55,12 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // 셀 세로 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 35
     }
     
     // 셀 가로 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 5
     }
     
     // 셀 크기 정하기 (n분의 1)
@@ -69,6 +69,8 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
        // let size = CGSize(width: width, height: width)
         
         let height = collectionView.frame.height / 8 - 1 // n등분
+        print(collectionView.frame.height)
+        print(height)
         let size = CGSize(width: height, height: height)
         
         return size
