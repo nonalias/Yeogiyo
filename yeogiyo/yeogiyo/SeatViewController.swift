@@ -9,36 +9,20 @@ import UIKit
 
 
 class SeatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
+    let projectDic:Dictionary = ["Libft" : 1314, "get_next_line" : 1327, "ft_printf" : 1316, "netwhat" : 1318, "ft_server" : 1328, "cub3d" : 1326, "miniRT" : 1315, "minishell" : 1331, "libasm" : 1330, "ft_services" : 1329, "CPP Module 00" : 1338, "CPP Module 01" : 1339, "CPP Module 02" : 1340, "CPP Module 03" : 1341, "CPP Module 04" : 1342, "CPP Module 05" : 1343, "CPP Module 06" : 1344, "CPP Module 07" : 1345, "CPP Module 08" : 1346, "Philosophers" : 1334, "ft_containers" : 1335, "webserv" : 1332, "ft_irc" : 1336, "ft_transcendence" : 1337]
+    
     @IBOutlet var pageTitle:UINavigationItem!
     var project:String = ""
     var tocken: String = ""
-    
-    func get_project_tag(uid: String, secret: String)->Any {
-        let urlStr : String = "https://api.intra.42.fr/oauth/token"
-        let url = URL(string: urlStr)
-        let sem = DispatchSemaphore.init(value: 0)
-        let session: URLSession = URLSession.shared
-        var request: URLRequest = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        let bodyData = "grant_type=client_credentials&client_id=" + uid + "&client_secret=" + secret
-        request.httpBody = bodyData.data(using: String.Encoding.utf8)
-        var token : Any?
-        session.dataTask(with: request, completionHandler: { (data, response, error) in
-            defer { sem.signal() }
-            guard let data = data else { print("nothing");return }
-            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
-            token = json?["access_token"]
-        }).resume()
-        sem.wait()
-        return token!
-    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pageTitle.title = project
-        tocken = get_project_tag(uid: "3c57e9f2a600143b5562861a4d9b544c9d7aba224c7ac375bb41d109eb1077d1", secret: "7bbe762ed4fb047ff83ee5b2732df34f5c2074750451a27fa576e3821cfec306") as! String
+        let projectKey = projectDic[project]!
+        print(projectKey)
+        
         // Do any additional setup after loading the view.
     }
     
