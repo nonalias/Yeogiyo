@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33188808258B650E0037D7C4 /* APIConnectFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33188807258B650E0037D7C4 /* APIConnectFunc.swift */; };
 		334AA826258B691F00F8E16A /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334AA825258B691F00F8E16A /* UserClass.swift */; };
+		4F6FA0BA258B174800EBA063 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6FA0B9258B174800EBA063 /* SeatViewController.swift */; };
 		4F74A0742589DA3300CD19F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74A0732589DA3300CD19F3 /* AppDelegate.swift */; };
 		4F74A0762589DA3300CD19F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74A0752589DA3300CD19F3 /* SceneDelegate.swift */; };
 		4F74A0782589DA3300CD19F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74A0772589DA3300CD19F3 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		33188807258B650E0037D7C4 /* APIConnectFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnectFunc.swift; sourceTree = "<group>"; };
 		334AA825258B691F00F8E16A /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
+		4F6FA0B9258B174800EBA063 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		4F74A0702589DA3300CD19F3 /* yeogiyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeogiyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F74A0732589DA3300CD19F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F74A0752589DA3300CD19F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				4F74A0812589DA3500CD19F3 /* Info.plist */,
 				33188807258B650E0037D7C4 /* APIConnectFunc.swift */,
 				334AA825258B691F00F8E16A /* UserClass.swift */,
+				4F6FA0B9258B174800EBA063 /* SeatViewController.swift */,
 			);
 			path = yeogiyo;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				4F74A0742589DA3300CD19F3 /* AppDelegate.swift in Sources */,
 				4F74A0762589DA3300CD19F3 /* SceneDelegate.swift in Sources */,
 				33188808258B650E0037D7C4 /* APIConnectFunc.swift in Sources */,
+				4F6FA0BA258B174800EBA063 /* SeatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
