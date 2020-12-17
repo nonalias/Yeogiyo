@@ -96,7 +96,7 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
         } else if (c1[indexPath.item].status == 3){
             cell.backgroundColor = UIColor.systemBlue
         } else {
-            cell.backgroundColor = UIColor.systemGray3
+            cell.backgroundColor = UIColor.systemGray6
         }
         //print(indexPath.item)
         //cell.myLabel.text = items[indexPath.row]
