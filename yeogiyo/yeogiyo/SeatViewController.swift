@@ -55,7 +55,7 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // 셀 세로 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 35
+        return 13
     }
     
     // 셀 가로 간격
@@ -69,9 +69,7 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
        // let size = CGSize(width: width, height: width)
         
         let height = collectionView.frame.height / 8 - 1 // n등분
-        print(collectionView.frame.height)
-        print(height)
-        let size = CGSize(width: height, height: height)
+        let size = CGSize(width: height * 1.3, height: height)
         
         return size
     }
@@ -101,8 +99,9 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.backgroundColor = UIColor.systemGray6
         }
         //print(indexPath.item)
-        //cell.myLabel.text = items[indexPath.row]
-        //cell.myLabel.textColor = UIColor.white
+        cell.myLabel.text = "1"
+        cell.myLabel.textColor = UIColor.systemFill
+        cell.myLabel.adjustsFontSizeToFitWidth = true
         //cell.myLabel.backgroundColor = UIColor.systemIndigo
         //print(indexPath)
         //print(type(of: indexPath))
