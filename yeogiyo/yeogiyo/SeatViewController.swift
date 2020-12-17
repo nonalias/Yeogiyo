@@ -21,7 +21,7 @@ class SeatViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         pageTitle.title = project
         let projectKey = projectDic[project]!
-        print(projectKey)
+        //print(projectKey)
         
         // Do any additional setup after loading the view.
     }
