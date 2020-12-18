@@ -25,6 +25,7 @@ macOS Big Sur 11.0.1
 * 클러스터 내 인원들의 과제 해결 여부를 체크후
 * 좌석 시트별로 진행 과정을 알 수 있음.
 ![image](https://user-images.githubusercontent.com/43032377/102607163-2865d300-416b-11eb-9a19-1b837ed46c75.png)
+![image](https://user-images.githubusercontent.com/43032377/102607335-7975c700-416b-11eb-8c15-ca5f7ce1ef57.png)
 
 
 ## 🕹기술스택
