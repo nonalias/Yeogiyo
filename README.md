@@ -21,7 +21,10 @@ IOS 14.xx
 macOS Big Sur 11.0.1
 
 ## 💻기능
-* 42Seoul의 Inner Circle Subject 중에서
+* 42Seoul의 Inner Circle Subject 내의 과제를 검색하여 
+* 클러스터 내 인원들의 과제 해결 여부를 체크후
+* 좌석 시트별로 진행 과정을 알 수 있음.
+
 ## 🕹기술스택
 * Swift 5.3.1
   * CollectionView
