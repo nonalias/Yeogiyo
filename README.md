@@ -1,4 +1,4 @@
-## 여기요
+## 💺여기요
 
 ### 여기요 (Yeogiyo)는 42 Seoul Cadet을 위한 유용한 좌석 서칭 프로그램입니다.
 ### 자신의 진도와 비슷한 사람의 좌석을 색깔로 구분하여 줍니다.
@@ -13,16 +13,16 @@
 
 </details>
 
-## 기간
+## 🗓기간
 2020.12.16 ~ 2020.12.18
 
-## 환경
+## 🔧환경
 IOS 14.xx
 macOS Big Sur 11.0.1
 
-## 기능
+## 💻기능
 * 42Seoul의 Inner Circle Subject 중에서
-## 기술스택
+## 🕹기술스택
 * Swift 5.3.1
   * CollectionView
   * TableView
