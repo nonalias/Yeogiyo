@@ -47,4 +47,8 @@ macOS Big Sur 11.0.1
 * Tab으로 C1, C2 ... C8, C10 구분하기
   * 현재, 프로토타입으로 C1만 구현이 된 상태이다.
   * 탭뷰로 여러 뷰들을 관리하면 나머지 클러스터의 좌석도 구현할 수 있다.
-  * 하나의 문제점으로는, API를 받아오는 것이 최대 30개가 허용이 되므로 이것은 [pagination](https://api.intra.42.fr/apidoc/guides/specification#pagination) 로 해결해볼 예정이다.
+  * 하나의 문제점으로는, API를 받아오는 것이 최대 30개가 허용이 되므로 이것은 [pagination](https://api.intra.42.fr/apidoc/guides/specification#pagination) 으로 해결해볼 예정이다.
+
+* 정식 서비스하기
+  * 만약 수요가 있다면, 정식으로 배포할 예정이다.
+  * 아직은 토큰을 임시로 발급하여 사용하고 있는데, 실제로 서비스할 경우 어떻게 수행할지 생각해 보아야 한다.
