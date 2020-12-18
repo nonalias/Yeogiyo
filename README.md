@@ -13,6 +13,21 @@
 
 </details>
 
-### 기술스택
+## 기간
+2020.12.16 ~ 2020.12.18
+
+## 환경
+IOS 14.xx
+macOS Big Sur 11.0.1
+
+## 기능
+* 42Seoul의 Inner Circle Subject 중에서
+## 기술스택
 * Swift 5.3.1
+  * CollectionView
+  * TableView
+  * URLRequest
+
 * 42 API
+  * Json
+  
