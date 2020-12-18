@@ -29,9 +29,10 @@ macOS Big Sur 11.0.1
 
 ## 🕹기술스택
 * Swift 5.3.1
-  * CollectionView
-  * TableView
-  * URLRequest
+  * CollectionView -> seats view
+  * TableView -> Intro view
+  * URLRequest -> Http connection
+  * JSONSerialization -> JSON parser
 
 * 42 API
   * Json
