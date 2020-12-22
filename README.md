@@ -3,6 +3,8 @@
 ### 여기요 (Yeogiyo)는 42 Seoul Cadet을 위한 유용한 좌석 서칭 프로그램입니다.
 ### 자신의 진도와 비슷한 사람의 좌석을 색깔로 구분하여 줍니다.
 ### 혼자하기 힘들었던 과제를 여기요를 통해 쉽게 해결할 수 있습니다.
+   
+[홍보영상](https://www.youtube.com/watch?v=cmB1KURhgb8&ab_channel=%EB%AC%B8%EA%B3%BC%EA%B0%9C%EB%B0%9C%EC%9E%90)
 
 <details>
   <summary>프로토타입</summary>
