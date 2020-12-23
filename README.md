@@ -5,12 +5,13 @@
 ### 혼자하기 힘들었던 과제를 여기요를 통해 쉽게 해결할 수 있습니다.
    
 [홍보영상](https://www.youtube.com/watch?v=cmB1KURhgb8&ab_channel=%EB%AC%B8%EA%B3%BC%EA%B0%9C%EB%B0%9C%EC%9E%90)
+
 ### 팀원
-[김태훈](https://github.com/nonalias)
-[박준홍](https://github.com/feldblume5263)
-[이재영](https://github.com/ejei0g)
-
-
+[김태훈](https://github.com/nonalias)   
+[박준홍](https://github.com/feldblume5263)   
+[이재영](https://github.com/ejei0g)   
+   
+   
 <details>
   <summary>프로토타입</summary>
   
