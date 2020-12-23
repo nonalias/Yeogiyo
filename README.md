@@ -5,6 +5,7 @@
 ### 혼자하기 힘들었던 과제를 여기요를 통해 쉽게 해결할 수 있습니다.
    
 [홍보영상](https://www.youtube.com/watch?v=cmB1KURhgb8&ab_channel=%EB%AC%B8%EA%B3%BC%EA%B0%9C%EB%B0%9C%EC%9E%90)
+
 [pdf](https://github.com/nonalias/Yeogiyo/files/5735702/42._.pdf)
 
 ### 여기요 팀원
