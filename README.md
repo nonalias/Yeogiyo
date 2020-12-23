@@ -38,6 +38,9 @@ macOS Big Sur 11.0.1
 ![image](https://user-images.githubusercontent.com/43032377/102607163-2865d300-416b-11eb-9a19-1b837ed46c75.png)
 
 
+## ⚓️Workflow
+![image](https://user-images.githubusercontent.com/43032377/103007543-f1caf680-4576-11eb-8b8b-dd1f20157332.png)
+
 ## 🕹기술스택
 * Swift 5.3.1
   * CollectionView -> seats view
